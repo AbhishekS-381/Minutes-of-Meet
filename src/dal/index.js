@@ -54,7 +54,6 @@ con.connect(function (err) {
     }
     catch (e) {
       console.log(e);
-      res.redirect("/error/" + req.params.userToken);
     }
     connectionCreated();
   }

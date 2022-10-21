@@ -84,28 +84,13 @@
                   <div class="col col-4">
                     <h5>Call to order :</p>
                   </div>
-                  <div class="col col-12">
-                    <p>
-                      <%= minutes[i].callToOrder %>
-                    </p>
-                  </div>
                 </div>
                 <div class="col col-12">
                   <div class="col col-4">
-                    <h5>Old business :</p>
+                    <h5>Meet Content :</p>
                   </div>
                   <div class="col col-12">
-                    <p>
-                      <%= minutes[i].oldBusiness %>
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-12">
-                  <div class="col col-4">
-                    <h5>New business :</p>
-                  </div>
-                  <div class="col col-12">
-                    <p>
+                    <p id="<%=i%>">
                       <%= minutes[i].newBusiness %>
                     </p>
                   </div>
@@ -118,5 +103,11 @@
     </div>
   </div>
 </body>
-
+<script>
+  var l = "<%=minutes.length%>";
+  for (var i = 0; i < l; i++) {
+    var new1 = document.getElementById(i).innerText;
+    document.getElementById(i).innerHTML = new1;
+  }
+</script>
 </html>

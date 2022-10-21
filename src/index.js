@@ -12,6 +12,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(router);
 
-app.listen(process.env.port, function () {
-  console.log("server is running on port " + process.env.port);
+app.listen(process.env.PORT, function () {
+  console.log("server is running on port " + process.env.PORT);
 });

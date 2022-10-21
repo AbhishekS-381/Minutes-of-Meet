@@ -11,8 +11,9 @@ const connectionPromise = new Promise((res, rej) => {
 })
 var con = mysql.createConnection({
   host: "sql.freedb.tech",
+  port: 3306,
   user: "freedb_abhishek",
-  password: "4CkYj7#vb*A5$S5",
+  password: "KeK&aH@PeTX&K3Y",
   database: "freedb_MinutesofMeet"
 });
 

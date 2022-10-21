@@ -10,10 +10,10 @@ const connectionPromise = new Promise((res, rej) => {
   connectionFailed = rej;
 })
 var con = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  host: "sql.freedb.tech",
+  user: "freedb_abhishek",
+  password: "4CkYj7#vb*A5$S5",
+  database: "freedb_MinutesofMeet"
 });
 
 con.connect(function (err) {

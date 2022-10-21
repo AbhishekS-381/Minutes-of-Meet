@@ -326,7 +326,6 @@ async function employeeQueryRender(req, res) {
           if (err) throw err;
           dal.getteamName(name[0].employeeID, async function (err, team) {
             if (err) throw err;
-            console.log(team);
             await res.render("employeeQuery", { userToken: req.params.userToken, userName: name[0].employeeName, flag: req.params.flag, team: team });
           });
         });

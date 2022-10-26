@@ -74,19 +74,17 @@
             <form action="/manager/meet/newActionItem/<%=team[i].teamName%>/<%=userToken%>/<%=flag%>" method="POST">
               <input class="addNewTask" type="text" name="newActionItem" placeholder="  Add an Action Item..."
                 autocomplete="off">
-              <input class="addNewTask" type="text" list="brow" name="assignedEmployee" autocomplete="off"
-                placeholder="  Assign To [Employee ID]...">
-              <datalist id="brow">
+              <select name="assignedEmployee" id="picklist">
                 <% for( var k=0; k < employee.length; k++){ %>
                   <% for( var l=0; l < members.length; l++){ %>
                     <% if(members[l].teamName==team[i].teamName && members[l].employeeID==employee[k].employeeID){%>
                       <option value="<%= employee[k].employeeID %>">
                         <%= employee[k].employeeName %>
                       </option>
-                      <%}%>
+                      <% } %>
                         <%}%>
                           <%}%>
-              </datalist>
+              </select>
               <button id="deleteBtn">Add Action Item</button>
             </form>
             <div>

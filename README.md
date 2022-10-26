@@ -1,5 +1,3 @@
-# Minutes-of-Meet
-
 This product can be used by enterprise to store minutes of meet.
 
 Hosted in : https://abhishek-minutes-of-meet.herokuapp.com/

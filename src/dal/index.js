@@ -29,7 +29,7 @@ con.connect(function (err) {
   }
   else {
     try {
-      con.query('CREATE DATABASE IF NOT EXISTS freedb_MinutesofMeet', function (err, result) {
+      con.query('CREATE DATABASE IF NOT EXISTS sql6529296', function (err, result) {
         if (err) throw err;
         con.query(QUERIES.CREATE_USER_DETAILS, function (err, result) {
           if (err) throw err;

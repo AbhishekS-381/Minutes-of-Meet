@@ -41,16 +41,22 @@ async function addUser(req, res) {
 
 async function homepageRender(req, res) {
   try {
-    dal.forLogin(req.body.employeeID, async function (err, result) {
+   dal.forLogin(req.body.employeeID, async function (err, result) {
       if (err) throw err;
-      if (await bcrypt.compare(req.body.password, result[0].employeePassword)) {
-        dal.addSession(result[0].userToken, async function (err, result) {
-          if (err) throw err;
-        });
-        if (result[0].userType === "employee") {
-          await res.redirect("/employee/home/" + result[0].userToken + "/0");
-        } else {
-          await res.redirect("/manager/home/" + result[0].userToken + "/0");
+      if (typeof (result[0]?.employeePassword) != "undefined") {
+        if (await bcrypt.compare(req.body.password, result[0]?.employeePassword)) {
+          dal.addSession(result[0].userToken, async function (err, result) {
+            if (err) throw err;
+          });
+          if (result[0].userType === "employee") {
+            await res.redirect("/employee/home/" + result[0].userToken + "/0");
+          } else {
+            await res.redirect("/manager/home/" + result[0].userToken + "/0");
+          }
+        }
+        else {
+          var flag = 1;
+          await res.render("login", { flag: flag });
         }
       }
       else {

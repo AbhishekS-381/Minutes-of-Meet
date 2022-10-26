@@ -91,9 +91,9 @@
                   <button type="button" id="underline" class="option-button format">
                     <i class="fa-solid fa-underline"></i>
                   </button>
-                  <button type="button" id="strikethrough" class="option-button format">
+                  <!-- <button type="button" id="strikethrough" class="option-button format">
                     <i class="fa-solid fa-strikethrough"></i>
-                  </button>
+                  </button> -->
                   <button type="button" id="superscript" class="option-button script">
                     <i class="fa-solid fa-superscript"></i>
                   </button>
@@ -146,33 +146,28 @@
                   </select>
                   <select id="fontName" class="adv-option-button"></select>
                   <select id="fontSize" class="adv-option-button"></select>
-                  <div class="input-wrapper">
+                  <!-- <div class="input-wrapper">
                     <input type="color" id="foreColor" class="adv-option-button" />
                     <p style='font-family: "Poppins", sans-serif;' for="foreColor">Font Color</p>
                   </div>
                   <div class="input-wrapper">
                     <input type="color" id="backColor" class="adv-option-button" />
                     <p style='font-family: "Poppins", sans-serif;' for="backColor">Highlight Color</p>
-                  </div>
+                  </div> -->
                 </div>
                 <div id="text-input" contenteditable="true"></div>
-
               </div>
+              <input type="hidden" name="divText" id="divText">
             </div>
-            <input type="hidden" name="divText" id="divText">
-            <button id="querySubmit" type="submit"
-              style="float: right; margin-bottom: 5%; margin-right: 2%; margin-top: 1%;" onclick="runn()">
-              <a>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                submit
-              </a>
-            </button>
-          </form>
+
         </div>
       </div>
+      <center>
+        <button id="submitbtn" type="submit" onclick="runn()">
+          Submit
+        </button>
+      </center>
+      </form>
     </div>
 </body>
 

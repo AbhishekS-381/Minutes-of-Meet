@@ -105,7 +105,7 @@
                           action="/manager/team/removeMember/<%=team[i].teamName%>/<%=members[j].employeeID%>/<%=userToken%>/<%=flag%>"
                           method="POST">
                           <div class="col-4 col">
-                            <label>Employee ID : </label>
+                            <label style="color: #6d23cf;">Employee ID : </label>
                             <label>
                               <%= members[j].employeeID %>
                             </label>
@@ -113,7 +113,7 @@
                           <div class="col-4 col">
                             <% for( var k=0; k < employee.length; k++){ %>
                               <% if(members[j].employeeID==employee[k].employeeID) { %>
-                                <label>Employee Name : </label>
+                                <label style="color: #6d23cf;">Employee Name : </label>
                                 <label>
                                   <%= employee[k].employeeName %>
                                 </label>
